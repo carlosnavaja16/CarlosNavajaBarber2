@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/dark-hive/jquery-ui.css">
+    <link rel="stylesheet" href="css/form.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            var data =
+            {
+                "items": 
+                [
+                    {
+                    "id": "c47rqdbfl5i756ph26oq7r84h8@group.calendar.google.com"
+                    }
+                ],
+                        
+                "timeZone": "EDT",
+                "timeMin": "2017-10-16T13:00:00.000Z",
+                "timeMax": "2017-10-16T22:00:00.000Z"
+            }
+
+            alert(data);
+
+            $( "#date" ).datepicker({
+
+                onSelect: function(date) {
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "https://www.googleapis.com/calendar/v3/freeBusy", true);
+                    xhr.send(data);
+
+                    alert(xhr.status);
+                    alert(xhr.statusText);
+
+                    $("#timeRadios").show( "blind", "swing",1000);
+                },
+
+                beforeShowDay: function(date){
+                    var day = date.getDay();
+                    return [(day != 0), ''];
+                }
+
+            });
+
+        });
+
+    </script>
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+        <form method="post">
+          <div class="form-group row">
+            <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="phoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="date" class="col-sm-2 col-form-label">Date</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="date" placeholder="Date">
+            </div>
+          </div>
+
+          <!--TIME SELECTION RADIO BUTTONS-->
+          <fieldset id="timeRadios" class="form-group">
+            <div class="row">
+              <legend class="col-form-legend col-sm-2">Time</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="times" id="time1" value="09:00:00">
+                    9:00 AM - 9:30 AM
+                  </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="09:30:00">
+                      9:30 AM - 10:00 AM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="10:00:00">
+                      10:00 AM - 10:30 AM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="10:30:00">
+                      10:30 AM - 11:00 AM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="11:00:00">
+                      11:00 AM - 11:30 AM
+                    </label>
+                  </div><div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="11:30:00">
+                      11:30 AM - 12:00 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="12:00:00">
+                      12:00 PM - 12:30 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="12:30:00">
+                      12:30 PM - 1:00 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="13:00:00">
+                      1:00 PM - 1:30 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="13:30:00">
+                      1:30 PM - 2:00 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="14:00:00">
+                      2:00 PM - 2:30 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="14:30:00">
+                      2:30 PM - 3:00 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="15:00:00">
+                      3:00 PM - 3:30 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="15:30:00">
+                      3:30 PM - 4:00 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="16:00:00">
+                      4:00 PM - 4:30 PM
+                    </label>
+                  </div><div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="16:30:00">
+                      4:30 PM - 5:00 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="17:00:00">
+                      5:00 PM - 5:30 PM
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="times" id="time1" value="17:30:00">
+                      5:30 PM - 6:00 PM
+                    </label>
+                  </div>                  
+                </div>
+            </div>
+          </fieldset>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    
+  </body>
+
+</html>
+
+

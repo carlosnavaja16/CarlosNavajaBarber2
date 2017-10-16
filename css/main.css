@@ -1,0 +1,108 @@
+/* ------ Sticky footer -----*/
+
+html
+{
+  position: relative;
+  min-height: 100%;
+}
+
+body
+{
+  /* Margin bottom by footer height */
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color:black;
+}
+
+.footer {
+  position: absolute;
+  padding: 50px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* Set the fixed height of the footer here */
+
+  background-color: rgb(41, 41,41);
+  color: white;
+}
+
+/*-------------------------------------------------- */
+
+.navbar
+{
+    background-color: rgb(41, 41,41);
+    color: white;
+    border-radius: 0  0 5px 5px;
+}
+
+a.nav-link
+{
+    color: darkgrey;
+    transition: all ease 0.3s;
+}
+
+a.nav-link:hover
+{
+    color: white;
+}
+
+.navbar-toggler
+{
+    
+}
+
+span.navbar-toggler-icon
+{
+    color: white;
+    line-height: 74;
+}
+
+.gallery
+{
+    display: none;
+}
+
+.appointments
+{
+    display: none;
+}
+
+.map
+{
+    display: none;
+}
+
+
+
+iframe.googleForm
+{
+
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+     filter: grayscale(100%);
+
+}
+
+iframe.googleCalendar
+{
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    filter: grayscale(100%);
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:800px;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:800px;
+    width:100%;
+    position:absolute;
+    filter: grayscale();
+}
