@@ -27,18 +27,24 @@
             data = JSON.stringify(data);
 
             $( "#date" ).datepicker({
-
+			
+				
                 onSelect: function(date) {
 
-                   /** var xhr = new XMLHttpRequest();
+                   /**
+				   var xhr = new XMLHttpRequest();
 
                     xhr.open("POST", "https://www.googleapis.com/calendar/v3/freeBusy", true);
 
                     xhr.onreadystatechange = function(){
+					
                         if (this.readyState == 4 && this.status == 200) {
                           
-                          document.getElementById("demo").innerHTML = xhttp.responseText;
+                          alert(xhr.responseText);
+						  
                         }
+						
+
                         else
                         {
                             alert("request error!");
@@ -46,11 +52,18 @@
                     };
 
                     xhr.send(data);
-
-                    alert(xhr.responseText);
-                    */
-
-                    $.ajax({
+					*/
+					
+					$.ajax({
+					  url: 'https://www.googleapis.com/calendar/v3/freeBusy',
+					  type: 'POST',
+					  data: data,
+					  contentType: 'application/json; charset=utf-8',
+					  dataType: 'json',
+					  success: 'null'
+					})
+                    
+                    /**$.ajax({
                         url: 'https://www.googleapis.com/calendar/v3/freeBusy',
                         type: 'POST',
                         data: data,
@@ -61,6 +74,10 @@
                         }
                       })
 
+					*/
+
+					
+					  
                     $("#timeRadios").show( "blind", "swing",1000);
                 },
 
