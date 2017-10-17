@@ -18,30 +18,48 @@
 
             var data =
             {
-                "items": 
-                [
-                    {
-                    "id": "c47rqdbfl5i756ph26oq7r84h8@group.calendar.google.com"
-                    }
-                ],
-                        
-                "timeZone": "EDT",
-                "timeMin": "2017-10-16T13:00:00.000Z",
-                "timeMax": "2017-10-16T22:00:00.000Z"
+                items: [{"id": "c47rqdbfl5i756ph26oq7r84h8@group.calendar.google.com"}],        
+                timeZone: "EDT",
+                timeMin: "2017-10-16T13:00:00.000Z",
+                timeMax: "2017-10-16T22:00:00.000Z"
             }
 
-            alert(data);
+            data = JSON.stringify(data);
 
             $( "#date" ).datepicker({
 
                 onSelect: function(date) {
 
-                    var xhr = new XMLHttpRequest();
+                   /** var xhr = new XMLHttpRequest();
+
                     xhr.open("POST", "https://www.googleapis.com/calendar/v3/freeBusy", true);
+
+                    xhr.onreadystatechange = function(){
+                        if (this.readyState == 4 && this.status == 200) {
+                          
+                          document.getElementById("demo").innerHTML = xhttp.responseText;
+                        }
+                        else
+                        {
+                            alert("request error!");
+                        }
+                    };
+
                     xhr.send(data);
 
-                    alert(xhr.status);
-                    alert(xhr.statusText);
+                    alert(xhr.responseText);
+                    */
+
+                    $.ajax({
+                        url: 'https://www.googleapis.com/calendar/v3/freeBusy',
+                        type: 'POST',
+                        data: data,
+                        hearders: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function(responseData){
+                            alert(responseData);
+                        }
+                      })
 
                     $("#timeRadios").show( "blind", "swing",1000);
                 },
@@ -62,6 +80,9 @@
   <body>
 
     <div class="container">
+
+        <p id="demo"></p>
+
         <form method="post">
           <div class="form-group row">
             <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
