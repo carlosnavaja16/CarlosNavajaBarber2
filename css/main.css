@@ -10,7 +10,7 @@ body
 {
   /* Margin bottom by footer height */
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 200px;
   background-color:black;
 }
 
@@ -59,17 +59,22 @@ span.navbar-toggler-icon
 
 .gallery
 {
-    display: none;
+
+}
+
+#instagramGallery
+{
+
 }
 
 .appointments
 {
-    display: none;
+    
 }
 
 .map
 {
-    display: none;
+    
 }
 
 

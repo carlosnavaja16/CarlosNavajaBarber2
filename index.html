@@ -15,16 +15,15 @@
         <meta name="author" content="Carlos Rossi">
 
         <!--CSS-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <!--JS-->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-        <script src="https://snapwidget.com/js/snapwidget.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script src="http://www.lightwidget.com/widgets/lightwidget.js"></script>
         <script src="js/js.js"></script>
 
         <!-- Custom styles for this template -->
@@ -46,17 +45,20 @@
                 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" data-toggle="collapse" data-target="#navbarNav" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-iteme">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-iteme">
+                        <a class="nav-link text-white" href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a id="galleryLink" class="nav-link" data-toggle="collapse" data-target="#navbarNav" href="gallery.html">Gallery</a>
+                        <a id="galleryLink" class="nav-link text-white"  href="#">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a id="appointmentsLink" class="nav-link" data-toggle="collapse" data-target="#navbarNav" href="#">Appointments</a>
+                        <a id="appointmentsLink" class="nav-link text-white" href="#">Appointments</a>
                     </li>
                     <li class="nav-item">
-                        <a id="mapLink" class="nav-link" data-toggle="collapse" data-target="#navbarNav" href="#">Location</a>
+                        <a id="mapLink" class="nav-link text-white" href="#">Location</a>
                     </li>
                     </ul>
                 </div>
@@ -83,36 +85,220 @@
             
         </div>
 
-        <div class="container gallery rounded">
+        <div class="container gallery">
 
-            <iframe src="https://snapwidget.com/embed/435423" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+            <div class="row">
+                
+                <div class="col-md-6">
+
+                    <h3 class="text-white">Services</h3>
+
+                    <div id="accordion" role="tablist">
+
+                        <div class="text-white">
+                                <div class="" role="tab" id="headingOne">
+                                    <a class="text-white" data-toggle="collapse" href="#haircut" aria-expanded="true" aria-controls="collapseOne">
+                                    Haircut $19
+                                    </a>
+                                </div>
+            
+                                <div id="haircut" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="container text-white">
+                                        <br>
+                                        Cutting and shaping the hair. This includes a line-up.
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="text-white">
+                            <div class="" role="tab" id="headingOne">
+                                <a class="text-white" data-toggle="collapse" href="#lineUp" aria-expanded="true" aria-controls="collapseOne">
+                                Line-Up $8
+                                </a>
+                            </div>
+
+                            <div id="lineUp" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="container text-white">
+                                    <br>
+                                    Edge ups are typically found among men. The barber uses T-shaped clippers ("outliner"), or a sharp razor blade to line up the customer's hair line, circling the entire head to include behind the ears, the back of the head, and sideburns.
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-white">
+                                <div class="" role="tab" id="headingOne">
+                                    <a class="text-white" data-toggle="collapse" href="#beard" aria-expanded="true" aria-controls="collapseOne">
+                                    Beard Arrangement $8 
+                                    </a>
+                                </div>
+            
+                                <div id="beard" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="text-white">
+                                        <br>
+                                        Edge ups are typically found among men. The barber uses T-shaped clippers ("outliner"), or a sharp razor blade to line up the customer's hair line, circling the entire head to include behind the ears, the back of the head, and sideburns.
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="text-white">
+                                <div class="" role="tab" id="headingOne">
+                                    <a class="text-white" data-toggle="collapse" href="#kidHaircut" aria-expanded="true" aria-controls="collapseOne">
+                                    Kids Haircut $16
+                                    </a>
+                                </div>
+            
+                                <div id="kidHaircut" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="text-white">
+                                        <br>
+                                        Cutting and shaping the hair of a child (15 or younger). This includes a line-up.
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="text-white">
+                                <div class="" role="tab" id="headingOne">
+                                    <a class="text-white" data-toggle="collapse" href="#hotTowel" aria-expanded="true" aria-controls="collapseOne">
+                                    Hot Towel Shave $20
+                                    </a>
+                                </div>
+            
+                                <div id="hotTowel" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="text-white">
+                                        <br>
+                                        Our signature shave that includes a half hour of pampering in a traditional setting. The shave consists of hot towels, shaving with a cut throat razor, a choice of shaving cream, and aftershave balm scents, that ends with an exceptional post shave moisturise.
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="text-white">
+                                <div class="" role="tab" id="headingOne">
+                                    <a class="text-white" data-toggle="collapse" href="#premium" aria-expanded="true" aria-controls="collapseOne">
+                                    Premium Hot Towel Shave $43
+                                    </a>
+                                </div>
+            
+                                <div id="premium" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="text-white">
+                                        <br>
+                                        Our signature shave that includes a half hour of pampering in a traditional setting. The shave consists of hot towels, shaving with a cut throat razor, a choice of shaving cream, and aftershave balm scents, that ends with an exceptional post shave moisturise. 
+                                        After the shave it is time for a refreshing and cleasing facial. Next we proceed to the black mask which will remove any and all impurities from the face. Last we concludet this premium service with a relaxing massage.
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="text-white">
+                                <div class="" role="tab" id="headingOne">
+                                    <a class="text-white" data-toggle="collapse" href="#combo" aria-expanded="true" aria-controls="collapseOne">
+                                    Combo Haircut + Hot Towel Shave $47
+                                    </a>
+                                </div>
+            
+                                <div id="combo" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="text-white">
+                                        <br>
+                                        First a quality haircut. Afterwards our signature shave that includes a half hour of pampering in a traditional setting. The shave consists of hot towels, shaving with a cut throat razor, a choice of shaving cream, and aftershave balm scents, that ends with an exceptional post shave moisturise. 
+                                        After the shave it is time for a refreshing and cleasing facial. Next we proceed to the black mask which will remove any and all impurities from the face. Last we concludet this premium service with a relaxing massage.
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <h3 class="text-white">Hours</h3>
+
+                    <table class="text-white">
+
+                        <tr>
+                            <td>Monday</td>
+                            <td>9:00am - 6:00pm</td> 
+                        </tr>
+
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>9:00am - 6:00pm</td> 
+                        </tr>
+
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>9:00am - 6:00pm</td> 
+                        </tr>
+
+                        <tr>
+                            <td>Thursday</td>
+                            <td>9:00am - 6:00pm</td> 
+                        </tr>
+
+                        <tr>
+                            <td>Friday</td>
+                            <td>9:00am - 6:00pm</td> 
+                        </tr>
+
+                        <tr>
+                            <td>Saturday</td>
+                            <td>9:00am - 6:00pm</td> 
+                        </tr>
+
+                        <tr>
+                            <td>Sundday</td>
+                            <td>Closed</td> 
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                
+            </div>
+                
+        </div>
+
+        <br>
+
+
+        <div class="container gallery">
+
+            <h3 class="text-white">Gallery</h3>
+
+            <br>
+
+            <iframe id="instagramGallery" src="http://www.lightwidget.com/widgets/d550e46a3dac511dbf876d7f5f7b31bd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%;border: 0; overflow:hidden;"></iframe>
+
 
         </div>
 
+        <br>
+
         <div class="container appointments">
-
-            <div class="row">
-
-                <div class="col-lg-6">
-
-                    <iframe class="googleForm rounded" src="https://docs.google.com/forms/d/e/1FAIpQLSc8I6v_N3c8zqBFMZztTBl1ljX7f1jJeVB81hNdBUIzLZOPPw/viewform?embedded=true" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-            
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <iframe  class="googleCalendar rounded" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23000000&amp;src=c47rqdbfl5i756ph26oq7r84h8%40group.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FNew_York" frameborder="0" scrolling="no"></iframe>
-
-                </div>
-
-            </div>
             
             
         </div>
         
 
-        <div class="container-fluid map">
+        <div class="container map">
+
+                <h3 class="text-white">Location</h3>
+                
+                <br>
 
             <div class="map-responsive">
                 <iframe class="rounded"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114688.48781237096!2d-80.38625432373992!3d26.065758202477898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a7a165cc063f%3A0x9a242d31ddacd7!2sThe+Men%E2%80%99s+Room+Barber+Shop!5e0!3m2!1sen!2sus!4v1499635393881" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

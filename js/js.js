@@ -1,24 +1,26 @@
 $(document).ready(function()
 {
 
-    $( "#galleryLink" ).click(function() {
-        $( ".gallery" ).show( "blind", "swing",1000 );
-        $( ".appointments" ).hide( "blind", "swing",1000 );
-        $( ".map" ).hide( "blind", "swing",1000 );
-    });
+    var frameWidth = $('#instagramGallery').width();
+    $('#instagramGallery').css({'height':frameWidth*3/4+'px'});
 
-    $( "#appointmentsLink" ).click(function() {
-        $( ".gallery" ).hide( "blind", "swing",1000 );
-        $( ".appointments" ).show( "blind", "swing",1000 );
-        $( ".map" ).hide( "blind", "swing",1000 );
-    });
+    if ($(window).width() <= 990) {
 
-    $( "#mapLink" ).click(function() {
-        $( ".gallery" ).hide( "blind", "swing",1000 );
-        $( ".appointments" ).hide( "blind", "swing",1000 );
-        $( ".map" ).show( "blind", "swing",1000 );
-    });
 
+        $('#navbarNav>ul>li>a').on('click', function(){
+
+            $('.navbar-collapse').collapse('hide');
+
+        });
+
+    }
+
+});
+
+$(window).resize(function(){
+    var frameWidth = $('#instagramGallery').width();
+    $('#instagramGallery').css({'height':frameWidth*3/4+'px'});
 
 
 });
+
