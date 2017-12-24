@@ -23,7 +23,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-        <script src="http://www.lightwidget.com/widgets/lightwidget.js"></script>
+        <script src="https://www.lightwidget.com/widgets/lightwidget.js"></script>
         <script src="js/js.js"></script>
 
         <!-- Custom styles for this template -->
@@ -49,16 +49,13 @@
                         <a class="nav-link text-white" href="#">Home</a>
                     </li>
                     <li class="nav-iteme">
-                        <a class="nav-link text-white" href="#">Services</a>
+                        <a class="nav-link text-white" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a id="galleryLink" class="nav-link text-white"  href="#">Gallery</a>
+                        <a id="galleryLink" class="nav-link text-white"  href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a id="appointmentsLink" class="nav-link text-white" href="#">Appointments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="mapLink" class="nav-link text-white" href="#">Location</a>
+                        <a id="mapLink" class="nav-link text-white" href="#location">Location</a>
                     </li>
                     </ul>
                 </div>
@@ -75,17 +72,15 @@
             <h6 class="text-center">(954)-515-8474</h6>
 
             <hr /> 
-
-            <button class="text-center btn btn-secondary" type="submit"><i class="fa fa-instagram" aria-hidden="true"></i></button>
-            <button class="text-center btn btn-secondary" type="submit"><i class="fa fa-linkedin-square" aria-hidden="true"></i></button>
-            <button class="text-center btn btn-secondary" type="submit"><i class="fa fa-github" aria-hidden="true"></i></button>
+        
+            <a class="btn btn-primary" href="#" role="button">Book an appointment</a>
 
             <br>
             <br>
             
         </div>
 
-        <div class="container gallery">
+        <div id="services" class="container gallery">
 
             <div class="row">
                 
@@ -275,7 +270,7 @@
         <br>
 
 
-        <div class="container gallery">
+        <div id="gallery" class="container gallery">
 
             <h3 class="text-white">Gallery</h3>
 
@@ -294,7 +289,7 @@
         </div>
         
 
-        <div class="container map">
+        <div id="location" class="container map">
 
                 <h3 class="text-white">Location</h3>
                 
@@ -313,19 +308,12 @@
 
             <div class="row">
 
-                <div class="col-lg-4 align-middle"><img src="assets/logoTiny.png" alt="logo"></div>
+                <div class="col-lg-6 align-middle"><img src="assets/logoTiny.png" alt="logo"></div>
 
-                <div class="col-lg-4 align-middle">
-                    <button class="text-center btn btn-secondary" type="submit"><i class="fa fa-instagram" aria-hidden="true"></i></button>
-                    <button class="text-center btn btn-secondary" type="submit"><i class="fa fa-linkedin-square" aria-hidden="true"></i></button>
-                    <button class="text-center btn btn-secondary" type="submit"><i class="fa fa-github" aria-hidden="true"></i></button>
-                </div>
-
-                <div class="col-lg-4 align-middle">
-                    <span>My other sites</span><br>
-                    <a href="carlosnavaja.us">Portfolio</a><br>
-                    <a href="#">Tutoring</a>
-                    
+                <div class="col-lg-6 align-middle">
+                    <a class="text-center btn btn-primary text-white" role="button"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="text-center btn btn-primary text-white" role="button"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a class="text-center btn btn-primary text-white" role="button"> <i class="fa fa-github" aria-hidden="true"></i></a>
                 </div>
 
             </div>

@@ -101,12 +101,12 @@ iframe.googleCalendar
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
-    height:800px;
+    height:500px;
 }
 .map-responsive iframe{
     left:0;
     top:0;
-    height:800px;
+    height:500px;
     width:100%;
     position:absolute;
     filter: grayscale();
