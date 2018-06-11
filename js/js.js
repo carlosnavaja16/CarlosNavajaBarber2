@@ -15,7 +15,7 @@ $(document).ready(function()
 
     }
 
-    $('a[href^="#"]').on('click',function (e) {
+    $('#navbarNav>ul>li>a[href^="#"]').on('click',function (e) {
 
 	    var target = this.hash;
 	    var $target = $(target);
