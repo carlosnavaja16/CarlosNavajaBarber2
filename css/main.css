@@ -57,46 +57,6 @@ span.navbar-toggler-icon
     line-height: 74;
 }
 
-.gallery
-{
-
-}
-
-#instagramGallery
-{
-
-}
-
-.appointments
-{
-    
-}
-
-.map
-{
-    
-}
-
-
-
-iframe.googleForm
-{
-
-    width: 100%;
-    height: 800px;
-    overflow: hidden;
-     filter: grayscale(100%);
-
-}
-
-iframe.googleCalendar
-{
-    width: 100%;
-    height: 800px;
-    overflow: hidden;
-    filter: grayscale(100%);
-}
-
 .map-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -109,5 +69,5 @@ iframe.googleCalendar
     height:500px;
     width:100%;
     position:absolute;
-    filter: grayscale();
+    //filter: grayscale();
 }
