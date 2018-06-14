@@ -1,6 +1,10 @@
 $(document).ready(function()
 {
 
+    if( isMobile.iOS()){
+        $('a#takeMe').attr('href', 'https://maps.apple.com/?ll=26.065771,-80.316416');
+    }
+
     var frameWidth = $('#instagramGallery').width();
     $('#instagramGallery').css({'height':frameWidth*3/4+'px'});
 
@@ -34,9 +38,10 @@ $(window).resize(function(){
 
 });
 
+/*
 function goToMap(){
 
-    /* if we're on iOS, open in Apple Maps */
+    // if we're on iOS, open in Apple Maps
     if((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPad") != -1) || (navigator.platform.indexOf("iPod") != -1)){
         
         window.location.replace("https://maps.apple.com/?ll=26.065771,-80.316416");
@@ -52,3 +57,4 @@ function goToMap(){
    
 }
 
+*/
