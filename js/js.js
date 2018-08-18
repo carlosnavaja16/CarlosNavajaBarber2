@@ -5,9 +5,6 @@ $(document).ready(function()
         $('a#takeMe').attr('href', 'https://maps.apple.com/?ll=26.065771,-80.316416');
     }
 
-    var frameWidth = $('#instagramGallery').width();
-    $('#instagramGallery').css({'height':frameWidth*3/4+'px'});
-
     if ($(window).width() <= 990) {
 
 
@@ -27,7 +24,7 @@ $(document).ready(function()
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top - 75
 	    }, 1000, 'swing');
-	});
+    }); 
 
 });
 

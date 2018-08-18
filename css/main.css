@@ -46,15 +46,28 @@ a.nav-link:hover
     color: white;
 }
 
-.navbar-toggler
-{
-    
-}
-
 span.navbar-toggler-icon
 {
     color: white;
     line-height: 74;
+}
+
+.instagramContainer
+{
+    overflow: hidden;
+    padding-top: 75%;
+    position: relative;
+}
+
+#instagramGallery{
+
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
 }
 
 .map-responsive{
