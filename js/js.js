@@ -5,7 +5,7 @@ $(document).ready(function()
 
     if (isiDevice)
     {
-        $('a.takeMe').attr('href', 'https://maps.apple.com/?ll=26.065771,-80.316416');
+        $('a.takeMe').attr('href', 'https://maps.apple.com/?address=12515%20Orange%20Dr\,%20Davie\,%20FL%20%2033330\');
     }
 
 
