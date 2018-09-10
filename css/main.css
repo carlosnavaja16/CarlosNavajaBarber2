@@ -52,6 +52,13 @@ span.navbar-toggler-icon
     line-height: 74;
 }
 
+.iMoved
+{
+    max-width: 18rem;
+    display: block;
+    margin: auto;
+}
+
 .instagramContainer
 {
     overflow: hidden;

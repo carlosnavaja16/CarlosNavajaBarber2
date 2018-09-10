@@ -1,9 +1,13 @@
 $(document).ready(function()
 {
 
-    if( isMobile.iOS()){
-        $('a#takeMe').attr('href', 'https://maps.apple.com/?ll=26.065771,-80.316416');
+    var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+
+    if (isiDevice)
+    {
+        $('a.takeMe').attr('href', 'https://maps.apple.com/?ll=26.065771,-80.316416');
     }
+
 
     if ($(window).width() <= 990) {
 
@@ -16,7 +20,9 @@ $(document).ready(function()
 
     }
 
-    $('#navbarNav>ul>li>a[href^="#"]').on('click',function (e) {
+    $('#navbarNav>ul>li>a[href^="#"]').click(function (e) {
+
+        e.preventDefault();
 
 	    var target = this.hash;
 	    var $target = $(target);
