@@ -5,7 +5,6 @@ $(document).ready(function()
 
     if (isiDevice)
     {
-        alert("iDevice");
         $('a.takeMe').attr('href', 'http://maps.apple.com/?address=12515+Orange+Dr,Davie,Florida');
     }
 
