@@ -1,20 +1,16 @@
 
 <script>
-    
-    /*if device is iOS then take to apple maps
+
+    //if iOS open apple maps
     if(navigator.userAgent.match(/(iPhone|iPad|iPod)/))
     {
-        alert("device is iOS");
+        window.location.replace("maps://maps.google.com/maps?daddr=26.065897, -80.314620&amp");
     }
-    //window.location.replace("");
 
     //else take to google maps
     else
     {
-        alert("device is not iOS");
+        window.location.replace("https://maps.google.com/maps?daddr=26.065897, -80.314620&amp");
     }
-    */
-
-    window.location.replace("https://goo.gl/maps/DAv2HySuhFQ2");
 
 </script>
