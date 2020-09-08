@@ -36,7 +36,7 @@ $(document).ready(function()
 
 $(window).resize(function(){
     var frameWidth = $('#instagramGallery').width();
-    $('#instagramGallery').css({'height':frameWidth*3/4+'px'});
+    $('#instagramGallery').css({'height':frameWidth*2+'px'});
 
 
 });
