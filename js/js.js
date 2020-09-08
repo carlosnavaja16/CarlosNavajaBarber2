@@ -17,6 +17,9 @@ $(document).ready(function()
             $('.navbar-collapse').collapse('hide');
 
         });
+        
+
+
 
     }
 
@@ -41,23 +44,3 @@ $(window).resize(function(){
 
 });
 
-/*
-function goToMap(){
-
-    // if we're on iOS, open in Apple Maps
-    if((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPad") != -1) || (navigator.platform.indexOf("iPod") != -1)){
-        
-        window.location.replace("https://maps.apple.com/?ll=26.065771,-80.316416");
-
-    }
-
-    else{
-
-        window.location.replace("https://www.google.com/maps/?q=26.065771,-80.316416")
-
-
-    }
-   
-}
-
-*/
